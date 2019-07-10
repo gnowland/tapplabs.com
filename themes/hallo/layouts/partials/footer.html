@@ -1,6 +1,4 @@
 <footer>
-    <div class="column"></div>
-    <div class="column">
-        {{ i18n "generator" | safeHTML }}
-    </div>
+    <div class="column">&copy; <span id="copyright-date">{{ now.Format "2006" }}</span></div>
+    <div class="column">{{ .Site.Params.Slugline | safeHTML }}</div>
 </footer>

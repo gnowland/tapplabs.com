@@ -3,6 +3,9 @@ body {
     color: $color-foreground;
     margin: 1rem;
     padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
 }
 
 html {
@@ -13,6 +16,9 @@ html {
 
 body {
     background-color: $color-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 a {

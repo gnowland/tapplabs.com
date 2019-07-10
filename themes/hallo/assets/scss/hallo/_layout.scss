@@ -1,61 +1,82 @@
 .column {
-    flex: 1;
+  flex: 1;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: auto;
+  margin-top: auto;
+
+  h1 {
+    margin-top: 0;
+    margin-left: -10px; /* Correction for margin of leftmost character. */
+    // margin-bottom: 0.4em;
+
+    height: 20vmin;
+    margin-bottom: 3vmin;
     display: flex;
-    margin-top: 20vh;
+    justify-content: center;
+  }
 
-    .column.left {
-        text-align: end;
+  h2 {
+    margin-left: -4px; /* Correction for margin of leftmost character. */
+    margin-top: 0;
+
+    margin-top: 5vmin;
+    margin-bottom: 2vmin;
+    font-size: 3rem; /* general fallback */
+    font-size: 9vmin;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 5vmin;
+  }
+
+  .links {
+    margin-top: 7vmin;
+    font-size: 4vmin;
+
+    a {
+      margin-right: 0.5rem;
+      text-decoration: none;
     }
+  }
 
-    .column.right {
-        h1 {
-            margin-left: -10px; /* Correction for margin of leftmost character. */
-            margin-bottom: 0.4em;
-        }
+  img.logo {
+    margin: 0;
+    height: 100%;
+    width: auto;
+  }
 
-        h2 {
-            margin-left: -4px; /* Correction for margin of leftmost character. */
-            margin-top: 0;
-        }
-        
-        .links {
-            margin-top: 2.5rem;
-            font-size: 1.5rem;
-
-            a {
-                margin-right: 0.5rem;
-                text-decoration: none;
-            }
-        }
-    }
-
-    @media screen and (max-width: $break-large) {
-        flex-direction: column;
-        margin-top: 0;
-
-        .column.left {
-            text-align: center;
-        }
-
-        .column.right h1 {
-            margin-top: 0;
-        }
-
-        img.portrait {
-            margin: 0;
-        }
-    }
+  @media screen and (max-width: $break-large) {
+    // Nada
+  }
 }
 
 footer {
-    display: flex;
-    margin-top: 3rem;
-    font-size: 0.75rem;
+  display: flex;
+  margin-top: 6vmin;
+  margin-bottom: 2vmin;
+  font-size: 0.66rem;
+  text-align: center;
+  flex-direction: column;
+}
 
-    @media screen and (max-width: $break-large) {
-        flex-direction: column;
-    }
+#bgvideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }

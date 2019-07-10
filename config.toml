@@ -1,21 +1,33 @@
-baseURL = "http://example.org/"
+baseURL = "https://tapplabs.com/"
 languageCode = "en-us"
-title = "Tapplabs"
+title = "Tapplabs: Application Actualization"
 theme = "hallo"
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["page", "section", "taxonomy", "taxonomyTerm"]
+googleAnalytics = "UA-143629755-1"
+
 [Author]
   name = "tapplabs"
+
 [params]
-  greeting = "tapplabs"
+  slugline = "A <a href=\"https://giffordnowland.com/\" target=\"blank\">Gifford Nowland</a> production"
+
+  [[params.links]]
+    iconset = "fas"
+    icon = "envelope"
+    title = "Email: info@tapplabs.com"
+    url = "mailto:info@tapplabs.com"
+
   [[params.links]]
     icon = "github"
-    title = "Github"
+    title = "Github: tapplabs"
     url = "https://github.com/tapplabs/"
+
   [[params.links]]
     icon = "twitter"
-    title = "Twitter"
+    title = "Twitter: @tapplabs"
     url = "https://twitter.com/tapplabs/"
-#  [params.colors]
-#      background = "#81c6ff"
+
+  [params.colors]
+      background = "#e2e4e5"
 #      foreground = "#edf7ff"
 #      hover = "#ffba82"

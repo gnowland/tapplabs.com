@@ -1,15 +1,13 @@
 {{ define "main" }}
 
 <main>
-    <div class="column left">
-        <img src="images/portrait.jpg" class="portrait" alt="Portrait" />
-    </div>
-    <div class="column right">
-        {{- with .Param "greeting" -}}
-            <h1>{{ . }}</h1>
-        {{- else -}}
-            <h1>{{ i18n "hello" }}.</h1>
-        {{- end -}}
+    <video id="bgvideo" autoplay="" playsinline="" loop="" poster="/images/background.png">
+        <source src="{{ "video/beaker.mp4" | relURL }}" type="video/mp4">
+    </video>
+    <div class="column">
+        <h1><span id="site-title" class="sr-only">{{ .Site.Author.name }}</span>
+            <img src="{{ "images/logo.svg" | relURL }}" class="logo" alt="{{ .Site.Author.name }} logo"/>
+        </h1>
         <h2>{{ i18n "i-am" }} {{ .Site.Author.name | default "Hallo" }}.</h2>
         <p>{{- partial "introduction.html" . -}}</p>
         
