@@ -1,4 +1,21 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Tapplabs"
 theme = "hallo"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+[Author]
+  name = "tapplabs"
+[params]
+  greeting = "tapplabs"
+  [[params.links]]
+    icon = "github"
+    title = "Github"
+    url = "https://github.com/tapplabs/"
+  [[params.links]]
+    icon = "twitter"
+    title = "Twitter"
+    url = "https://twitter.com/tapplabs/"
+#  [params.colors]
+#      background = "#81c6ff"
+#      foreground = "#edf7ff"
+#      hover = "#ffba82"
