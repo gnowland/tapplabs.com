@@ -1,8 +1,8 @@
 {{ define "main" }}
 
 <main>
-    <video id="bgvideo" autoplay="" playsinline="" loop="" poster="/images/background.png">
-        <source src="{{ "video/beaker.mp4" | relURL }}" type="video/mp4">
+    <video id="bgvideo" preload="auto" loop autoplay muted playsinline poster="{{ "images/beaker-still.jpg" | relURL }}">
+        <noscript><source src="{{ "video/beaker-1280x720.mp4" | relURL }}" type="video/mp4"></noscript>
     </video>
     <div class="column">
         <h1><span id="site-title" class="sr-only">{{ .Site.Author.name }}</span>
