@@ -1,5 +1,12 @@
 (function () {
 
+  function playVidOnLoad(elId) {
+    var video = document.getElementById(elId);
+    if (!!(video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2))
+      video.play();
+  }
+  playVidOnLoad('bgvideo');
+
   /**
    * Convert an Integer into a Roman Numeral, because, fancy
    * @param {int} num The Number to Roman Numeralize
