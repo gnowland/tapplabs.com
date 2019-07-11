@@ -2,7 +2,7 @@
 
 <main>
     <video id="bgvideo" preload="auto" loop autoplay muted playsinline poster="{{ "images/beaker-still.jpg" | relURL }}">
-        <noscript><source src="{{ "video/beaker-1280x720.mp4" | relURL }}" type="video/mp4"></noscript>
+        <source src="{{ "video/beaker-loop.mp4" | relURL }}" type="video/mp4">
     </video>
     <div class="column">
         <h1><span id="site-title" class="sr-only">{{ .Site.Author.name }}</span>

@@ -1,36 +1,4 @@
 (function () {
-  /**
-   * Responsive Videos
-   * @param {string} elId Video Element ID
-   */
-  function responsiveVideo(elId){
-    //get screen width and pixel ratio
-    var width = screen.width;
-    var dpr = window.devicePixelRatio;
-
-    // videos
-    var smallVideo = 'video/beaker_640x360.mp4';
-    var bigVideo = 'video/beaker-1280x720.mp4';
-
-    // init source tag
-    var videoTag = document.getElementById(elId);
-    var srcTag = document.createElement('source');
-
-    if (width < 1400) {
-      // Small screens
-      srcTag.src = smallVideo;
-    }
-    else {
-      // Large screens
-      srcTag.src = bigVideo;
-    }
-
-    // keep it DRY
-    srcTag.type = 'video/mp4';
-    videoTag.innerHTML = '';
-    videoTag.appendChild(srcTag);
-  }
-  responsiveVideo('bgvideo');
 
   /**
    * Convert an Integer into a Roman Numeral, because, fancy
