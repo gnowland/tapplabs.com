@@ -9,7 +9,7 @@ googleAnalytics = "UA-143629755-1"
   name = "tapplabs"
 
 [params]
-  slugline = "A <a href=\"https://giffordnowland.com/\" target=\"blank\">Gifford Nowland</a> production"
+  slugline = false#"A <a href=\"https://giffordnowland.com/\" target=\"blank\">Gifford Nowland</a> production"
 
   [[params.links]]
     iconset = "fas"
