@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   color: #fff;
@@ -78,21 +79,34 @@ main {
     /* Correction for margin of leftmost character. */
     height: 20vmin;
     margin-bottom: 3vmin;
-    display: flex;
-    justify-content: center; }
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex-grow: 0;
+    position: relative; }
   main h2 {
     margin-left: -4px;
     /* Correction for margin of leftmost character. */
     margin-top: 0;
     margin-top: 5vmin;
-    margin-bottom: 2vmin;
-    font-size: 3rem;
-    /* general fallback */
-    font-size: 9vmin; }
+    margin-bottom: 2vmin; }
+  main h1 small {
+    position: absolute;
+    font-size: 1.7vmin;
+    font-weight: 200;
+    letter-spacing: 0.7em;
+    right: 26vmin;
+    bottom: 2vmin;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.6);
+    right: 13%;
+    bottom: 13%; }
+  main .m0 {
+    margin: 0; }
   main p {
     margin-top: 0;
-    margin-bottom: 0;
-    font-size: 5vmin; }
+    margin-bottom: 0; }
   main .links {
     margin-top: 7vmin;
     font-size: 4vmin; }

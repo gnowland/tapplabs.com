@@ -5,8 +5,9 @@
         <source src="{{ "video/beaker-loop.mp4" | relURL }}" type="video/mp4">
     </video>
     <div class="column">
-        <h1><span id="site-title" class="sr-only">{{ .Site.Author.name }}</span>
+        <h1 class="m0"><span id="site-title" class="sr-only">{{ .Site.Author.name }}</span>
             <img src="{{ "images/logo.svg" | relURL }}" class="logo" alt="{{ .Site.Author.name }} logo"/>
+            <small>NY &middot; CA</small>
         </h1>
         <h2>{{ i18n "i-am" }} {{ .Site.Author.name | default "Hallo" }}.</h2>
         
