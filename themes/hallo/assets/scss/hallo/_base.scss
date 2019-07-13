@@ -37,20 +37,35 @@ a {
 }
 
 h1 {
-    font-size: 9rem;
+    // font-size: 8rem;
 }
 
 h2 {
-    font-size: 3rem;
-    font-weight: normal;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-size: 3.075rem; /* general fallback */
+    font-size: 6.4vmin;
 }
-@media screen and (max-width: $break-large) {
+
+p {
+    font-size: 1.575rem; /* general fallback */
+    font-size: 3.3vmin;
+    font-weight: 300;
+}
+
+@media screen and (max-width: $break-large) { // 992px
     h1 {
-        font-size: 15vw;
+        // font-size: 15vw;
     }
 
     h2 {
-        font-size: 2.5rem;
+        font-size: 2.49rem; /* general fallback */
+        font-size: 5.2vmin;
+    }
+
+    p {
+        font-size: 1.44rem; /* general fallback */
+        font-size: 3vmin;
     }
 }
 
