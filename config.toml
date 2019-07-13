@@ -1,6 +1,6 @@
 baseURL = "https://tapplabs.com/"
 languageCode = "en-us"
-title = "Tapplabs: Application Actualization"
+title = "tapplabs: Web + Mobile Application Actualization"
 theme = "hallo"
 disableKinds = ["page", "section", "taxonomy", "taxonomyTerm"]
 googleAnalytics = "UA-143629755-1"
