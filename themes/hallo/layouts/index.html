@@ -9,7 +9,6 @@
             <img src="{{ "images/logo.svg" | relURL }}" class="logo" alt="{{ .Site.Author.name }} logo"/>
         </h1>
         <h2>{{ i18n "i-am" }} {{ .Site.Author.name | default "Hallo" }}.</h2>
-        <p>{{- partial "introduction.html" . -}}</p>
         
         <div class="links">
             {{- range .Site.Params.links -}}
