@@ -41,7 +41,8 @@ h1 {
 }
 
 h2 {
-    font-weight: 800;
+    font-family: $varela-round;
+    font-weight: 700;
     letter-spacing: -0.02em;
     font-size: 3.075rem; /* general fallback */
     font-size: 6.4vmin;
@@ -65,7 +66,7 @@ p {
 
     p {
         font-size: 1.44rem; /* general fallback */
-        font-size: 3vmin;
+        font-size: 3.2vmin;
     }
 }
 

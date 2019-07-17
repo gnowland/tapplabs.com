@@ -5,27 +5,29 @@
         <source src="{{ "video/beaker-loop.mp4" | relURL }}" type="video/mp4">
     </video>
     <div class="column">
-        <h1 class="m0"><span id="site-title" class="sr-only">{{ .Site.Author.name }}</span>
+        <h1><span id="site-title" class="sr-only">{{ .Site.Author.name }}</span>
             <img src="{{ "images/logo.svg" | relURL }}" class="logo" alt="{{ .Site.Author.name }} logo"/>
             <small>NY &middot; CA</small>
         </h1>
-        <h2>Highly potent web + mobile applications.</h2>
-        <p><em>A full-service concept-to-consumer digital innovation laboratory.</em></p>
-        <div>
-            <h3>Production Availability</h3>
+        <div class="what-we-do">
+            <h2>Powerfully potent web + mobile applications</h2>
+            <p><em>A full-service concept-to-consumer digital innovations laboratory</em></p>
+        </div>
+        <div class="availability">
+            <h3>Project Capacity</h3>
             <div id="current-availability">
-                <p id="current-quarter"><small id="current-status">Closed</small></p>
-                <p id="current-note">We're fully occupied building world-class application experiences for our current clients.</p>
+                <p id="current-quarter" class="availability-status"><small id="current-status" class="closed">Full</small></p>
+                <p id="current-note" class="availability-note">We're hard at work building world-class applications for this current client production cycle, but we'd love to work with you in the <span id="next-cycle">next cycle</span>!</p>
             </div>
             <div id="upcoming-availability">
-                <p id="upcoming-quarter"><small id="upcoming-status"></small></p>
-                <p id="upcoming-note"></p>
+                <p id="upcoming-quarter" class="availability-status"><small id="upcoming-status" class="open">Open</small></p>
+                <p id="upcoming-note" class="availability-note">We're accepting Requests for Proposal for the upcoming production cycle, please send us a message!</p>
             </div>
         </div>
         
         <div class="links">
             {{- range .Site.Params.links -}}
-                <a rel="me" href="{{ .url }}" title="{{ .title }}">
+                <a rel="me" href="{{ .url }}" title="{{ .title }}" target="_blank">
                     <span class="{{ .iconset | default "fab" }} fa-{{ .icon }}"></span>
                 </a>
             {{- end -}}

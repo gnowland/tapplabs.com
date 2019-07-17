@@ -5,16 +5,24 @@
 main {
   display: flex;
   flex-direction: column;
+  flex: 1;
   text-align: center;
-  margin:auto 2rem;
+  margin: auto 2rem;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   h1 {
-    margin-top: 0;
+    margin-top: auto;
+    margin-bottom: 0;
     margin-left: -10px; /* Correction for margin of leftmost character. */
     // margin-bottom: 0.4em;
 
     height: 20vmin;
-    margin-bottom: 3vmin;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
@@ -22,13 +30,21 @@ main {
     flex-grow: 0;
     position: relative;
   }
-  
+
+  .what-we-do {
+    margin: 6vmin auto 3vmin;
+  }
+
   h2 {
     margin-left: -4px; /* Correction for margin of leftmost character. */
     margin-top: 0;
+    margin-bottom: 1vmin;
 
-    margin-top: 5vmin;
-    margin-bottom: 2vmin;
+    + p {
+      font-size: 3.1vmin;
+      font-weight: 100;
+      letter-spacing: 0.02em;
+    }
   }
 
   h1 small {
@@ -39,13 +55,13 @@ main {
     right: 26vmin;
     bottom: 2vmin;
     display: inline-block;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
     right: 13%;
     bottom: 13%;
   }
 
   .m0 {
-    margin: 0; 
+    margin: 0;
   }
 
   p {
@@ -53,8 +69,99 @@ main {
     margin-bottom: 0;
   }
 
+  .availability {
+    display: inline-block;
+    margin: 4vmin;
+    margin-bottom: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.1);
+    max-width: 27rem;
+    overflow: hidden;
+    color: #232323;
+    text-align: left;
+
+    #current-availability {
+      background-color: #e5e3e6;
+    }
+
+    > div {
+      display: flex;
+      padding: 1.4vh 0 0.7vh;
+
+      > p {
+        align-self: center;
+        margin: 0.7vh 1.5vw 1.4vh;
+
+        + p {
+          margin-left: 0;
+        }
+      }
+
+      + div {
+        padding: 0.7vh 0 1.4vh;
+
+        > p {
+          margin: 1.4vh 1.5vw 0.7vh;
+        }
+      }
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 300;
+      padding: 1.3vh 0.75vw;
+      font-size: 2.3vmin;
+      color: rgba(255, 255, 255, 0.9);
+      background-color: #73519a;
+      letter-spacing: 0.05em;
+      box-shadow: inset -1px -3px 3px 0 rgba(62, 39, 86, 0.1);
+      text-align: center;
+
+      small {
+        display: block;
+        font-size: 0.56rem; // fallback
+        font-size: 1.1vmin;
+        text-transform: uppercase;
+        padding-top: 2px;
+      }
+    }
+
+    .availability-status {
+      small {
+        font-size: 0.66rem; // fallback
+        font-size: 1.3vmin;
+        border-radius: 4px;
+        padding: 0.3em 0.4em 0.36em;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -0.3em;
+        width: 3.6em;
+        text-align: center;
+
+        &.closed {
+          background: #8a8181; //#a73f3f;
+        }
+        &.open {
+          background: #3e985b;
+        }
+      }
+    }
+
+    .availability-note {
+      font-size: 0.8em; // fallback
+      font-size: 1.9vmin;
+      color: #524646;
+      margin-left: 0;
+    }
+  }
+}
+
   .links {
-    margin-top: 7vmin;
+    margin-top: 2vmin;
     font-size: 4vmin;
 
     a {
@@ -70,15 +177,17 @@ main {
   }
 
   @media screen and (max-width: $break-large) {
-    // Nada
+    main .availability .availability-note {
+      font-size: 1.9vmin;
+      line-break: 1;
+    }
   }
-}
 
 footer {
   display: flex;
-  margin-top: 6vmin;
+  margin-top: 2vmin;
   margin-bottom: 2vmin;
-  font-size: 0.66rem;
+  font-size: 0.66rem; // set
   text-align: center;
   flex-direction: column;
 }
